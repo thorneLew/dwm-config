@@ -81,7 +81,7 @@ vel_recv=$(get_velocity $received_bytes $old_received_bytes $now)
 vel_trans=$(get_velocity $transmitted_bytes $old_transmitted_bytes $now)
 
 get_network_speed() {
-	echo -e "${vel_recv} ${vel_trans}"
+	echo -e " ${vel_recv}  ${vel_trans}"
 }
 
 xsetroot -name "| $(print_mem)M, $(get_network_speed), $(get_batery_charging_status)$(get_battery_combined_percent)%, $(print_volume)  | $(print_date)"
